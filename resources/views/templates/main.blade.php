@@ -7,6 +7,7 @@
     @yield('meta')
     <title>@yield('title') - Dawn</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,500,300' rel='stylesheet' type='text/css'>
     <meta name="description" content="@yield('description')" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -47,17 +48,21 @@
         <div class="container" id="page-content">
         @yield('content')
         </div>
-    </div>
 
-    <!-- Footer -->
-    <hr>
-    <div class="row">
-        <div class="text-center col-md-12">
-            <p id="footer-text">Nyanpasu</p>
-            <p>Copyright &copy; 2016 Tim Weiß/Dissary Studios &middot; All Rights Reserved &middot; <a href="https://dissarystudios.net/" >Dissary Studios</a></p>
-            <p id="footer-links"><a href="/about/">Über</a> - <a href="/about/team/">Team</a> - <a href="https://github.com/Dissary/Dawn">GitHub</a> - Running <a href="https://github.com/Dissary/Dawn">Dawn 1.0dev</a></p>
+        <!-- Footer -->
+        <hr>
+        <div class="container" id="footer-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p id="footer-text">Nyanpasu</p>
+                    <p>Copyright &copy; 2016 Tim Weiß/Dissary Studios &middot; All Rights Reserved &middot; <a href="https://dissarystudios.net/" >Dissary Studios</a></p>
+                    <p id="footer-links"><a href="/about/">Über</a> - <a href="/about/team/">Team</a> - <a href="https://github.com/Dissary/Dawn">GitHub</a> - Running <a href="https://github.com/Dissary/Dawn">Dawn 1.0dev</a></p>
+                </div>
+            </div>
         </div>
     </div>
+
+
     <!-- Skripte -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

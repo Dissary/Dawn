@@ -1,16 +1,16 @@
 @extends('templates.main')
 
 {{-- Seitentitel --}}
-@section('title', 'Über')
+@section('title', 'Über - Team')
 {{-- Seitenbeschreibung --}}
-@section('description', 'Wer hat Dawn gemacht? Warum ist es entstanden? Erfahre alles auf dieser Seite!')
+@section('description', 'Wer hat Dawn gemacht? Erfahre alles auf dieser Seite!')
 
 
 {{-- Seiteninhalt --}}
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Über diese Seite</h2>
+            <h2 class="page-header">Über das Team</h2>
         </div>
     </div>
 @stop

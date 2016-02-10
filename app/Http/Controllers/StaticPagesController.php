@@ -11,8 +11,11 @@ class StaticPagesController extends Controller
 {
     public function about()
     {
-        $year = "2016";
+        return view('staticpages.about.page');
+    }
 
-        return view('staticpages.about')->with('year', $year);
+    public function aboutteam()
+    {
+        return view('staticpages.about.team');
     }
 }

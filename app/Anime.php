@@ -24,6 +24,8 @@ class Anime extends Model
             'released'
         ];
 
+    protected $dates = ['released'];
+
     public function setReleasedAttribute($date)
     {
         $this->attributes['released'] = Carbon::parse($date);
