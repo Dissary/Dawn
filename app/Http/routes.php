@@ -37,4 +37,9 @@ Route::group(['middleware' => ['web']], function () {
     */
 
     Route::resource('anime', 'AnimeController');
+
+    Route::controllers([
+        'auth'      =>  'Auth\AuthController',
+        'password'  =>  'Auth\PasswordController',
+    ]);
 });
