@@ -42,4 +42,6 @@ Route::group(['middleware' => ['web']], function () {
         'auth'      =>  'Auth\AuthController',
         'password'  =>  'Auth\PasswordController',
     ]);
+
+    Route::get('user/logout', 'ProfileController@logout');
 });

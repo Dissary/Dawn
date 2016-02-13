@@ -8,6 +8,13 @@
 @section('description')
 Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge parat!
 @stop
+{{-- Meta Tags --}}
+@section('meta')
+    <meta property="og:url"                content="http://dawn.dissarystudios.net/anime/{{ $anime->id }}" />
+    <meta property="og:title"              content="{{ $anime->name }}" />
+    <meta property="og:description"        content="{{ mb_substr($anime->description, 0, 140, "UTF-8") }}..." />
+    <meta property="og:image"              content="https://storage.googleapis.com/dissary/dawn/images/banner/{{ $anime->headerimg_url }}" />
+@stop
 
 
 {{-- Seiteninhalt --}}
@@ -34,6 +41,8 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
                 <p class="anime-meta-info">Dauer pro Folge: {{ $anime->episodes_duration }} Minuten</p>
                 <p class="anime-meta-info">Gesamtlänge: {{ round($anime->episodes*$anime->episodes_duration/60, 2) }} Stunden</p>
                 <p class="anime-meta-info">Kategorien: {{ $anime->categories }}</p>
+                <p class="anime-meta-info">MyAnimeList: <a href="http://myanimelist.net/anime/{{ $anime->mal_id }}">{{ $anime->mal_id }}</a></p>
+                <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
             </div>
         </div>
         <div id="anime-description" class="col-lg-9">

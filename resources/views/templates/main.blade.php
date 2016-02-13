@@ -14,6 +14,7 @@
     @yield('css')
 </head>
 <body>
+    @include('includes.trackers')
     <!-- Navigationsleiste -->
     <nav class="navbar navbar-default navbar-fixed-top" id="basic-navbar" role="navigation">
         <div class="container">
@@ -27,17 +28,30 @@
                     <li><a href="/recommendations/">Vorschläge</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nutzer<span class="caret"></span></a>
+                    @if(Auth::check())
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->pub_username }}<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/user/list/">Meine Liste</a></li>
+                            <li class="dropdown-header">Nutzer</li>
                             <li><a href="/user/profile/">Mein Profil</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/user/accsettings/">Kontoeinstellungen</a></li>
-                            <li><a href="/user/pgsettings/">Seiteneinstellungen</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/user/invite/">Lade einen Freund ein! <span class="badge">Neu</span></a></li>
+                            <li><a href="/user/list/">Meine Liste</a></li>
+                            <li><a href="/user/logout/">Abmelden</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Einstellungen</li>
+                            <li><a href="/user/settings/">Nutzereinstellungen</a></li>
+                            <li><a href="/user/pagesettings/">Seiteneinstellungen</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Sonstiges</li>
+                            <li><a href="/user/refer/">Referral-Programm</a></li>
                         </ul>
                     </li>
+                        @else
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nutzer<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/auth/login/">Anmelden</a></li>
+                                    <li><a href="/auth/register/">Registrieren</a></li>
+                                </ul>
+                            </li>
+                    @endif
                 </ul>
             </div>
         </div>

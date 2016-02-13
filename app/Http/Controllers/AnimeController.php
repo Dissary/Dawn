@@ -10,6 +10,12 @@ use App\Http\Controllers\Controller;
 
 class AnimeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('contentcurator', ['except' => ['index', 'show']]);
+    }
+
     public function index()
     {
         $animes = Anime::latest('released')->get();

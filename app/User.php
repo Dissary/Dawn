@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'pub_username', 'user_role',
     ];
 
     /**
@@ -23,4 +23,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isContentCurator()
+    {
+        $response = false;
+
+        if ($this->user_role == 'curator' || $this->user_role == 'admin')
+            $response = true;
+
+        return $response;
+    }
+
+    public function isAdministrator()
+    {
+        $response = false;
+
+        if($this->user_role == 'admin')
+            $response = true;
+
+        return $response;
+    }
 }
