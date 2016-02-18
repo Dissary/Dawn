@@ -10,7 +10,7 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
 @stop
 {{-- Meta Tags --}}
 @section('meta')
-    <meta property="og:url"                content="http://dawn.dissarystudios.net/anime/{{ $anime->id }}" />
+    <meta property="og:url"                content="https://dawn.dissarystudios.net/anime/{{ $anime->id }}" />
     <meta property="og:title"              content="{{ $anime->name }}" />
     <meta property="og:description"        content="{{ mb_substr($anime->description, 0, 140, "UTF-8") }}..." />
     <meta property="og:image"              content="https://storage.googleapis.com/dissary/dawn/images/banner/{{ $anime->headerimg_url }}" />
@@ -59,7 +59,7 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
 {{-- CSS Dateien --}}
 @section('css')
     <style>
-        @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+        @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
         #page-wrapper { margin-top:30px; }
         #header-image {
             max-height:350px;
