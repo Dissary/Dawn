@@ -69,8 +69,8 @@
         <div class="container" id="footer-container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p id="footer-text">Nyanpasu</p>
-                    <p>Copyright &copy; 2016 Tim Weiß/Dissary Studios &middot; All Rights Reserved &middot; <a href="https://dissarystudios.net/" >Dissary Studios</a></p>
+                    <p id="footer-text"><a href="https://www.youtube.com/watch?v=JAEbJs-rnVc">Nyanpasu</a></p>
+                    <p>Copyright &copy; 2016 <a href="https://weiss.moe">Tim Weiß</a>/Dissary Studios &middot; All Rights Reserved &middot; <a href="https://dissarystudios.net/" >Dissary Studios</a></p>
                     <p id="footer-links"><a href="/about/">Über</a> - <a href="/about/team/">Team</a> - <a href="https://github.com/Dissary/Dawn">GitHub</a> - Running <a href="https://github.com/Dissary/Dawn">Dawn 1.0dev</a></p>
                 </div>
             </div>

@@ -90,23 +90,53 @@ class ProfileController extends Controller
         switch ($state)
         {
             case "watched":
-                $list->watched_anime = $list->watched_anime . ',' . $id;
+                if($list->watched_anime == "")
+                    $list->watched_anime = $list->watched_anime . $id;
+                else
+                {
+                    if($list->watched_anime != "")
+                        $list->watched_anime = $list->watched_anime . ',' . $id;
+                }
                 $list->update();
                 break;
             case "watching":
-                $list->watching_anime = $list->watching_anime . ',' . $id;
+                if($list->watching_anime == "")
+                    $list->watching_anime = $list->watching_anime . $id;
+                else
+                {
+                    if($list->watching_anime != "")
+                        $list->watching_anime = $list->watching_anime . ',' . $id;
+                }
                 $list->update();
                 break;
             case "paused":
-                $list->paused_anime = $list->paused_anime . ',' . $id;
+                if($list->paused_anime == "")
+                    $list->paused_anime = $list->paused_anime . $id;
+                else
+                {
+                    if($list->paused_anime != "")
+                        $list->paused_anime = $list->paused_anime . ',' . $id;
+                }
                 $list->update();
                 break;
             case "dropped":
-                $list->dropped_anime = $list->dropped_anime . ',' . $id;
+                if($list->dropped_anime == "")
+                    $list->dropped_anime = $list->dropped_anime . $id;
+                else
+                {
+                    if($list->dropped_anime != "")
+                        $list->dropped_anime = $list->dropped_anime . ',' . $id;
+                }
                 $list->update();
                 break;
             case "planned":
-                $list->planned_anime = $list->planned_anime . ',' . $id;
+                if($list->planned_anime == "")
+                    $list->planned_anime = $list->planned_anime . $id;
+                else
+                {
+                    if($list->planned_anime != "")
+                        $list->planned_anime = $list->planned_anime . ',' . $id;
+                }
                 $list->update();
                 break;
         }
