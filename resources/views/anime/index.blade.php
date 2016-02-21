@@ -35,7 +35,7 @@
                             <h3 class="panel-title">Wusstest du schon?</h3>
                         </div>
                         <div class="panel-body">
-                            <p class="table-description">Bei uns sind im Moment {{ $anime_count }} Anime gelistet. Das wären insgesamt {{ $anime_duration/60 }} Stunden.</p>
+                            <p class="table-description">Bei uns sind im Moment {{ $anime_count }} Anime gelistet. Das wären insgesamt {{ round($anime_duration/60, 2) }} Stunden.</p>
                         </div>
                     </div>
                 </div>

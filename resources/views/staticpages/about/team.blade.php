@@ -12,6 +12,9 @@
         <div class="col-lg-12">
             <h2 class="page-header">Über das Team</h2>
         </div>
+        <div class="col-lg-10">
+
+        </div>
     </div>
 @stop
 

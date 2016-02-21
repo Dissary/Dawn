@@ -90,54 +90,84 @@ class ProfileController extends Controller
         switch ($state)
         {
             case "watched":
-                if($list->watched_anime == "")
-                    $list->watched_anime = $list->watched_anime . $id;
-                else
+                $list_items = explode(',', $list->watched_anime);
+
+                if(array_search($id, $list_items) === false)
                 {
-                    if($list->watched_anime != "")
-                        $list->watched_anime = $list->watched_anime . ',' . $id;
+                    if($list->watched_anime == "")
+                        $list->watched_anime = $list->watched_anime . $id;
+                    else
+                    {
+                        if($list->watched_anime != "")
+                            $list->watched_anime = $list->watched_anime . ',' . $id;
+                    }
+                    $list->update();
                 }
-                $list->update();
+
                 break;
             case "watching":
-                if($list->watching_anime == "")
-                    $list->watching_anime = $list->watching_anime . $id;
-                else
+                $list_items = explode(',', $list->watching_anime);
+
+                if(array_search($id, $list_items) === false)
                 {
-                    if($list->watching_anime != "")
-                        $list->watching_anime = $list->watching_anime . ',' . $id;
+                    if($list->watching_anime == "")
+                        $list->watching_anime = $list->watching_anime . $id;
+                    else
+                    {
+                        if($list->watching_anime != "")
+                            $list->watching_anime = $list->watching_anime . ',' . $id;
+                    }
+                    $list->update();
                 }
-                $list->update();
+
                 break;
             case "paused":
-                if($list->paused_anime == "")
-                    $list->paused_anime = $list->paused_anime . $id;
-                else
+                $list_items = explode(',', $list->paused_anime);
+
+                if(array_search($id, $list_items) === false)
                 {
-                    if($list->paused_anime != "")
-                        $list->paused_anime = $list->paused_anime . ',' . $id;
+                    if($list->paused_anime == "")
+                        $list->paused_anime = $list->paused_anime . $id;
+                    else
+                    {
+                        if($list->paused_anime != "")
+                            $list->paused_anime = $list->paused_anime . ',' . $id;
+                    }
+                    $list->update();
                 }
-                $list->update();
+
                 break;
             case "dropped":
-                if($list->dropped_anime == "")
-                    $list->dropped_anime = $list->dropped_anime . $id;
-                else
+                $list_items = explode(',', $list->dropped_anime);
+
+                if(array_search($id, $list_items) === false)
                 {
-                    if($list->dropped_anime != "")
-                        $list->dropped_anime = $list->dropped_anime . ',' . $id;
+                    if($list->dropped_anime == "")
+                        $list->dropped_anime = $list->dropped_anime . $id;
+                    else
+                    {
+                        if($list->dropped_anime != "")
+                            $list->dropped_anime = $list->dropped_anime . ',' . $id;
+                    }
+                    $list->update();
                 }
-                $list->update();
+
                 break;
             case "planned":
-                if($list->planned_anime == "")
-                    $list->planned_anime = $list->planned_anime . $id;
-                else
+                $list_items = explode(',', $list->planned_anime);
+
+                if(array_search($id, $list_items) === false)
                 {
-                    if($list->planned_anime != "")
-                        $list->planned_anime = $list->planned_anime . ',' . $id;
+                    if($list->planned_anime == "")
+                        $list->planned_anime = $list->planned_anime . $id;
+                    else
+                    {
+                        if($list->planned_anime != "")
+                            $list->planned_anime = $list->planned_anime . ',' . $id;
+                    }
+                    $list->update();
                 }
-                $list->update();
+
                 break;
         }
 

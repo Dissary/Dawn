@@ -42,6 +42,7 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
                 <p class="anime-meta-info">Gesamtlänge: {{ round($anime->episodes*$anime->episodes_duration/60, 2) }} Stunden</p>
                 <p class="anime-meta-info">Kategorien: {{ $anime->categories }}</p>
                 <p class="anime-meta-info">MyAnimeList: <a href="http://myanimelist.net/anime/{{ $anime->mal_id }}">{{ $anime->mal_id }}</a></p>
+                <p class="anime-meta-info"><a href="/user/profile/addtolist/{{ $anime->id }}/watched">Hinzufügen</a></p>
                 <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
             </div>
         </div>
@@ -79,7 +80,7 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
         }
         #anime-title{
             margin-top:10px;
-            font-family: "Exo 2", Arial;
+            font-family: "Exo 2", sans-serif;
             text-align: center;
         }
         #anime-title:after{
