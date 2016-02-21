@@ -42,7 +42,20 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
                 <p class="anime-meta-info">Gesamtlänge: {{ round($anime->episodes*$anime->episodes_duration/60, 2) }} Stunden</p>
                 <p class="anime-meta-info">Kategorien: {{ $anime->categories }}</p>
                 <p class="anime-meta-info">MyAnimeList: <a href="http://myanimelist.net/anime/{{ $anime->mal_id }}">{{ $anime->mal_id }}</a></p>
-                <p class="anime-meta-info"><a href="/user/profile/addtolist/{{ $anime->id }}/watched">Hinzufügen</a></p>
+                <div class="btn-group" id="list-buttom">
+                    <a href="/user/profile/addtolist/{{ $anime->id }}/watched" class="btn btn-success" role="button">Geschaut</a>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Mehr...</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/user/profile/addtolist/{{ $anime->id }}/planned">Geplant</a></li>
+                        <li><a href="/user/profile/addtolist/{{ $anime->id }}/watching">Am Schauen</a></li>
+                        <li><a href="/user/profile/addtolist/{{ $anime->id }}/dropped">Abgebrochen</a></li>
+                        <li><a href="/user/profile/addtolist/{{ $anime->id }}/paused">Pausiert</a></li>
+                    </ul>
+                </div>
+                <br>
                 <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
             </div>
         </div>
@@ -139,6 +152,9 @@ Informationen zu {{ $anime->name }}. Mit Dawn hast du immer neue Vorschläge par
             font-size:16px;
             color:#4783BA;
             font-family: "Exo 2", sans-serif;
+        }
+        #list-buttom{
+            margin-bottom:10px;
         }
     </style>
 @stop

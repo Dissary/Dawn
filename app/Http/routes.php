@@ -36,6 +36,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('anime', 'AnimeController@store');
     */
 
+    Route::get('anime/{id}/{name}', 'AnimeController@show');
     Route::resource('anime', 'AnimeController');
 
     Route::controllers([

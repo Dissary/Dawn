@@ -23,7 +23,9 @@
                                     <?php $anime_count++; $anime_duration = $anime_duration + $anime->episodes * $anime->episodes_duration ?>
                                         <tr class="anime-table-row">
                                             <td class="table-cover-image"><img class="table-cover-item" src="https://storage.googleapis.com/dissary/dawn/images/covers/{{ $anime->imageurl }}" /></td>
-                                            <td class="table-item table-name-item"><a href="/anime/{{ $anime->id }}">{{ $anime->name }}</a></td>
+                                            <td class="table-item table-name-item">
+                                                <a href="/anime/{{ $anime->id }}/{{ str_slug($anime->name, "-") }}">{{ $anime->name }}</a>
+                                            </td>
                                             <td class="table-item table-episodes-item">{{ $anime->episodes }}</td>
                                         </tr>
                                 @endforeach

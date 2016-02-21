@@ -12,6 +12,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     @yield('css')
+    <style>
+        body{
+            padding-bottom:70px;
+        }
+    </style>
 </head>
 <body>
     @include('includes.trackers')
@@ -25,7 +30,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Start</a></li>
                     <li><a href="/anime/">Anime</a></li>
-                    <li><a href="/recommendations/">Vorschläge</a></li>
+                    <li><a href="/recommendations/">Empfehlungen</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if(Auth::check())
@@ -57,7 +62,7 @@
             </div>
         </div>
     </nav>
-
+    @include('templates.includes.supernav')
     <!-- Inhalt -->
     <div id="page-wrapper">
         <div class="container" id="page-content">
