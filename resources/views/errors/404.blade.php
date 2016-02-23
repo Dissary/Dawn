@@ -15,6 +15,9 @@
         <div class="col-lg-12">
             <h2 class="page-header">404 - Nicht gefunden!</h2>
         </div>
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+            <img id="error-image" class="img-responsive" src="https://storage.googleapis.com/dissary/dawn/images/crying_miku_404.png" />
+        </div>
         <div class="col-lg-12">
             <p class="message">Die Seite <span id="wrong-path">/{{ Request::path() }}/</span> konnte leider nicht gefunden werden.</p>
             <p class="message">Du kannst gerne einen "Error Report" einreichen. <a href="/support/error-reports">Teach me, senpai!</a></p>
@@ -39,6 +42,9 @@
         }
         .message{
             text-align: center;
+        }
+        #error-image{
+            margin-bottom:20px;
         }
     </style>
 @stop
