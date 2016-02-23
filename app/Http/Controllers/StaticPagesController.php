@@ -18,4 +18,9 @@ class StaticPagesController extends Controller
     {
         return view('staticpages.about.team');
     }
+
+    public function transparency()
+    {
+        return view('staticpages.about.transparancy');
+    }
 }

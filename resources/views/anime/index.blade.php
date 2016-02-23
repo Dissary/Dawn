@@ -7,6 +7,15 @@
 
 <?php $anime_count = 0; $anime_duration = 0 ?>
 
+@section('top-fullwidth')
+    <div id="banner">
+        <div id="banner-content">
+            <p id="banner-text">Wir haben deinen Lieblingsanime...</p>
+            <p id="banner-subtext">...und du <a id="banner-link" href="/search/">findest</a> bestimmt auch den nächsten.</p>
+        </div>
+    </div>
+@stop
+
 {{-- Seiteninhalt --}}
 @section('content')
         <div class="row">
@@ -55,7 +64,7 @@
     {!! Html::style('css/anime-list.css') !!}
     <style>
         #page-wrapper {
-            margin-top:30px;
+            margin-top:50px;
         }
         .anime-item{
             /*

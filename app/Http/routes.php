@@ -27,6 +27,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('about', 'StaticPagesController@about');
     Route::get('about/team', 'StaticPagesController@aboutteam');
+    Route::get('about/transparency', 'StaticPagesController@transparency');
 
     /*
     Route::get('anime', 'AnimeController@index');

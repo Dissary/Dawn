@@ -16,6 +16,41 @@
         body{
             padding-bottom:70px;
         }
+        #banner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            height:250px;
+            background-image: url('https://storage.googleapis.com/dissary/dawn/images/dawn-anime-image.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+        #banner-content{
+            max-width: 50%;
+        }
+        #banner-text{
+            text-align: center;
+            color:#fff;
+            font-family: "Exo 2", sans-serif;
+            font-weight: 500;
+            font-size: 32px;
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.5), -1px 0 #9C9C9C, 0 1px #9C9C9C;
+        }
+        #banner-subtext{
+            font-family: "Exo 2", sans-serif;
+            text-align: center;
+            color:#ffffff;
+            font-size:22px;
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+        }
+        #banner-link{
+            color:#5bc0de;
+        }
+        #page-wrapper {
+            margin-top:50px;
+        }
     </style>
 </head>
 <body>
@@ -65,8 +100,11 @@
     @include('templates.includes.supernav')
     <!-- Inhalt -->
     <div id="page-wrapper">
+
+        @yield('top-fullwidth')
+
         <div class="container" id="page-content">
-        @yield('content')
+            @yield('content')
         </div>
 
         <!-- Footer -->
@@ -81,7 +119,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Skripte -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
